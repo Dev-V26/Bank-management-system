@@ -1,0 +1,24 @@
+{
+  "name": "mern-bank-management",
+  "version": "1.0.0",
+  "description": "MERN Stack Bank Management System with Independent Frontend and Backend",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install --prefer-offline --no-audit && cd frontend/client && npm install --prefer-offline --no-audit && cd ../../backend && npm install --prefer-offline --no-audit",
+    "dev": "npm run dev:backend & npm run dev:frontend",
+    "dev:backend": "cd backend && npm start",
+    "dev:frontend": "cd frontend/client && npm start",
+    "build:frontend": "cd frontend/client && npm run build",
+    "preview:frontend": "cd frontend/client && npm run preview"
+  },
+  "keywords": [
+    "MERN",
+    "Bank",
+    "Management",
+    "React",
+    "Express",
+    "MongoDB"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}

@@ -1,0 +1,21 @@
+/node_modules
+/build
+/backend/node_modules
+/frontend/client/node_modules
+/frontend/client/dist
+
+# Environment files (update these locally, don't commit)
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
+import { api } from "../services/api";
 import {
   Drawer,
   List,
@@ -17,14 +17,7 @@ const Sidebar = () => {
   useEffect(() => {
     const fetchBalance = async () => {
       try {
-        const token = localStorage.getItem("token");
-
-        const res = await axios.get("/api/balance", {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
-
+        const res = await api.get("/balance");
         setBalance(res.data.balance);
       } catch (err) {
         console.error("Balance fetch failed");

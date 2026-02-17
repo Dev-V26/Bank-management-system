@@ -1,8 +1,12 @@
 import axios from 'axios';
 
+// Get backend URL from environment variable
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
+
 export const api = axios.create({
-  baseURL: '/api',
+  baseURL: `${BACKEND_URL}/api`,
   timeout: 20000,
+  withCredentials: true,
 });
 
 api.interceptors.request.use((config) => {

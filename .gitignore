@@ -2,3 +2,20 @@
 /build  
 /backend/node_modules
 /frontend/client/node_modules
+
+# Environment files (keep these local, don't commit)
+.env
+.env.local
+backend/.env
+frontend/client/.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
